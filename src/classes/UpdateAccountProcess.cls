@@ -10,6 +10,6 @@ global with sharing class UpdateAccountProcess {
                 task.OwnerId = listUsers.iterator().next().Id;
             }
         }
-
+        update listTask;
     }
 }
