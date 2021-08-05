@@ -8,6 +8,7 @@ global with sharing class UpdateAccountProcess {
         {
             for(Task task : listTask) {
                 task.OwnerId = listUsers.iterator().next().Id;
+
             }
         }
         update listTask;
