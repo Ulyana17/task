@@ -14,11 +14,36 @@
                 <option name="types">
                   <set>
                     <MetadataType>
+                      <option name="entries">
+                        <list>
+                          <MetadataEntry>
+                            <option name="name" value="AccountTriggerHandler" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="NewAccountProcess" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="ShopTriggerHandler" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                          <MetadataEntry>
+                            <option name="name" value="UpdateAccountProcess" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                        </list>
+                      </option>
                       <option name="name" value="ApexClass" />
+                      <option name="wildcard" value="false" />
                     </MetadataType>
                     <MetadataType>
                       <option name="entries">
                         <list>
+                          <MetadataEntry>
+                            <option name="name" value="AccountTrigger" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
                           <MetadataEntry>
                             <option name="name" value="ShopTrigger" />
                             <option name="selected" value="true" />
@@ -29,7 +54,16 @@
                       <option name="wildcard" value="false" />
                     </MetadataType>
                     <MetadataType>
-                      <option name="name" value="StaticResource" />
+                      <option name="entries">
+                        <list>
+                          <MetadataEntry>
+                            <option name="name" value="Task" />
+                            <option name="selected" value="true" />
+                          </MetadataEntry>
+                        </list>
+                      </option>
+                      <option name="name" value="CustomObject" />
+                      <option name="wildcard" value="false" />
                     </MetadataType>
                   </set>
                 </option>
