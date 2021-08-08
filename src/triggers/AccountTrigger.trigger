@@ -3,8 +3,11 @@
  */
 
 trigger AccountTrigger on Account (before insert) {
-    List<Id> listId = new List<Id>();
+    List<Id> ids = new List<Id>();
+    for(Account acc : Trigger.new){
+        ids.add(acc.Id);
+    }
     if(Trigger.isBefore && Trigger.isInsert){
-        AccountTriggerHandler.createAccount(listId);
+        AccountTriggerHandler.createAccount(ids);
     }
 }
