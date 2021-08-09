@@ -3,14 +3,20 @@ global with sharing class UpdateAccountProcess {
     global static void AssignTasks(List<Id> accIds)
     {
         List<Task> listTask = [SELECT Id, WhatId FROM Task WHERE WhatId IN : accIds];
-        List<User> listUsers = [SELECT Id FROM User WHERE Alias = 'uyanu'];
+        List<Task> listToUpdate = new List<Task>();
+        User listUsers = [SELECT Id FROM User WHERE Alias = 'suser'];
         if(listTask.size() >= 3)
         {
             for(Task task : listTask) {
-                task.OwnerId = listUsers.iterator().next().Id;
-
+                task.OwnerId = listUsers.Id;
+                listToUpdate.add(task);
             }
         }
-        update listTask;
+        try {
+            update listToUpdate;
+        } catch(DmlException e)
+        {
+            System.debug('list does not update!');
+        }
     }
 }
