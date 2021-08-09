@@ -9,7 +9,7 @@ trigger AccountTrigger on Account (before insert, before update) {
         }
         if (Trigger.isUpdate) {
             for(Account acc : Trigger.new){
-                if(acc.BillingAddress != trigger.oldMap.get(acc.Id).BillingAddress)
+                if(acc.BillingAddress != Trigger.oldMap.get(acc.Id).BillingAddress)
                     ids.add(acc.Id);
             }
             AccountTriggerHandler.beforeUpdateMethod(ids);

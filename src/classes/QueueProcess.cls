@@ -1,6 +1,12 @@
 public with sharing class QueueProcess implements Queueable{
-    public void execute(Queueable QB) {
-        List<Contact> listContacts = [SELECT Id, Is_Synced__c, Processed_By_Queue__c FROM Contact];
+
+    private List<Contact> listContacts;
+
+    public QueueProcess(List<Contact> listContacts){
+        this.listContacts = listContacts;
+    }
+
+    public void execute(QueueableContext QB) {
         List<Contact> listToUpdate = new List<Contact>();
         for(Contact contact : listContacts)
         {
