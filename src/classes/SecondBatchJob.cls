@@ -1,6 +1,6 @@
 global with sharing class SecondBatchJob implements Database.Batchable<Contact>{
     public Iterable<Contact> start(Database.BatchableContext info){
-        return new CustomIterable();
+        return new List<Contact>;
     }
     global void execute(Database.BatchableContext info, List<Contact> listContact){
         for(Contact contact : listContact)
