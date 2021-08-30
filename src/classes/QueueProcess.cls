@@ -11,7 +11,7 @@ public with sharing class QueueProcess implements Queueable{
         for(Contact contact : listContacts)
         {
             contact.Is_Synced__c = false;
-            contact.Processed_By_Future__c = true;
+            contact.Processed_By_Queue__c = true;
             listToUpdate.add(contact);
             System.debug('Queueble Job!');
         }
